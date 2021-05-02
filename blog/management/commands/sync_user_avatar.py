@@ -2,16 +2,6 @@
 # encoding: utf-8
 
 
-"""
-@version: ??
-@author: liangliangyy
-@license: MIT Licence
-@contact: liangliangyy@gmail.com
-@site: https://www.lylinux.net/
-@software: PyCharm
-@file: sync_user_avatar.py
-@time: 2018/7/18 下午10:21
-"""
 
 from django.core.management.base import BaseCommand
 from oauth.models import OAuthUser

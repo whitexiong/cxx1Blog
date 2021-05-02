@@ -2,17 +2,6 @@
 # encoding: utf-8
 
 
-"""
-@version: ??
-@author: liangliangyy
-@license: MIT Licence
-@contact: liangliangyy@gmail.com
-@site: https://www.lylinux.net/
-@software: PyCharm
-@file: forms.py
-@time: 2017/1/7 上午12:36
-"""
-
 from haystack.forms import SearchForm
 from django import forms
 import logging

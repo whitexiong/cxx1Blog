@@ -2,16 +2,6 @@
 # encoding: utf-8
 
 
-"""
-@version: ??
-@author: liangliangyy
-@license: MIT Licence
-@contact: liangliangyy@gmail.com
-@site: https://www.lylinux.net/
-@software: PyCharm
-@file: logentryadmin.py
-@time: 2018/5/24 下午10:37
-"""
 from django.contrib.contenttypes.models import ContentType
 from django.urls import reverse, NoReverseMatch
 from django.contrib.admin.models import LogEntry, ADDITION, CHANGE, DELETION

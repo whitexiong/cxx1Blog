@@ -2,16 +2,6 @@
 # encoding: utf-8
 
 
-"""
-@version: ??
-@author: liangliangyy
-@license: MIT Licence
-@contact: liangliangyy@gmail.com
-@site: https://www.lylinux.net/
-@software: PyCharm
-@file: create_testdata.py
-@time: 2017/3/11 上午1:58
-"""
 
 from django.core.management.base import BaseCommand
 from blog.models import Article, Tag, Category

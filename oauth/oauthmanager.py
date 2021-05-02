@@ -2,17 +2,6 @@
 # encoding: utf-8
 
 
-"""
-@version: ??
-@author: liangliangyy
-@license: MIT Licence
-@contact: liangliangyy@gmail.com
-@site: https://www.lylinux.net/
-@software: PyCharm
-@file: oauthmanager.py
-@time: 2016/11/26 下午5:09
-"""
-
 from abc import ABCMeta, abstractmethod, abstractproperty
 from oauth.models import OAuthUser, OAuthConfig
 from django.conf import settings
