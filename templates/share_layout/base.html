@@ -1,0 +1,294 @@
+{% load static %}
+{% load cache %}
+{% load compress %}
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="zh-CN" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="zh-CN" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="zh-CN" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<!--<![endif]-->
+<head>
+
+        <!--google  ad -->
+         <script data-ad-client="ca-pub-2762414263954067" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+         <meta charset="UTF-8"/>
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="description" content="cxx1.com原创博客网站、Django建站、数学、物理、化学、第一原创网。打造中国第一原创博客网，第一python博客，原创第一、博客第一">
+         <meta name="keywords" content="python、php、java、网站工具、站长、博客、数学、Django、mdeditor、c哩c哩、C++、C#、C语言、流程图、机器学习、人工智能、网站建设、Markdown、原创、Django、Markdown、editormd、原创、seo、C++、c#、单片机、人工智能、机器学习、大数据、云计算、阿里云、腾讯云、百度、Google、阿里巴巴、华为">
+
+        <!--百度验证-->
+         <meta name="domain_verify" content="pmrgi33nmfuw4ir2ejrxq6brfzrw63jcfqrgo5ljmqrduitemq3tcmtgguzdsmtbmu2gemdcheztkzjzhfrtozrygbrtozdfgarcyitunfwwku3bozsseorrgu4tiobxha2dcobvheyh2">
+
+        <!--百度验证-->
+         <meta name="baidu_union_verify" content="4795476678203ce8f6ac6135afe6863f">
+
+        <!--Google验证-->
+         <meta name="google-site-verification" content="1AoImeiqjMfPbFsL1ZG6kq11BFzOqukwlCJzYfaZSj8" />
+
+        <!--百度统计-->
+         <meta name="baidu-site-verification" content="cb2bzjC3Uo" />
+
+        <!--分辨率适应-->
+         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
+
+         <meta name="renderer" content="webkit">
+
+         <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+         <meta name="format-detection" content="telephone=no">
+
+         <meta name="mobile-web-app-capable" content="yes">
+         <meta name="apple-mobile-web-app-capable" content="yes">
+         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+         <meta name="apple-mobile-web-app-title" content="cxx1.com 原创博客第一网"/>
+
+
+
+    {% block header %}
+    {% endblock %}
+
+    <link rel="profile" href="http://gmpg.org/xfn/11"/>
+
+    <!--图标-->
+    <link rel="icon" href="{% static 'blog/img/favicon.ico' %}">
+    <link rel="icon" href="{% static 'bg/css/normalize.css' %}">
+    <link rel="icon" href="{% static 'bg/css/bg.css' %}">
+    <link rel="icon" href="{% static 'bg/css/component.css' %}">
+    <!--[if lt IE 9]>
+    <script src="{% static 'blog/js/html5.js' %}" type="text/javascript"></script>
+    <![endif]-->
+
+    <link rel="alternate" type="application/rss+xml" title="{{ SITE_NAME }} &raquo; Feed" href="/feed"/>
+
+    {% compress css %}
+
+     <link rel='stylesheet' id='twentytwelve-fonts-css' href="{% static 'blog/fonts/fonts.css' %}" type='text/css' media='all'/>
+     <link rel='stylesheet' id='twentytwelve-style-css' href="{% static 'blog/css/style.css' %}" type='text/css' media='all'/>
+     <link href="{% static 'blog/css/oauth_style.css' %}" rel="stylesheet">
+     <link rel="stylesheet" href="{% static 'mdeditor/css/editormd.preview.css' %}">
+     <link rel="stylesheet" href="{% static 'mdeditor/css/editormd.min.css' %}">
+
+    {% comment %}
+
+        <!--cnd -->
+
+        <script data-ad-client="ca-pub-2762414263954067" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/transition.js"></script>
+        <!-- 压缩版本 -->
+          <!--引入three.js三维引擎-->
+        <!--<script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"></script>-->
+          <!-- <script src="./three.js"></script> -->
+        <!--<script src="http://www.yanhuangxueyuan.com/threejs/build/three.js"></script>-->
+
+
+
+
+    {% endcomment %}
+        <!--[if lt IE 9]>
+        <link rel='stylesheet' id='twentytwelve-ie-css'  href="{% static 'blog/css/ie.css' %}" type='text/css' media='all' />
+        <![endif]-->
+        <!--<link rel="stylesheet" href="{% static 'assets/css/bg.css' %}">-->
+        <link rel="stylesheet" href="{% static 'pygments/default.css' %}"/>
+        <link rel="stylesheet" href="{% static 'blog/css/nprogress.css' %}">
+
+        <!-- Live 2d for css-->
+        <link rel="stylesheet" href="{% static 'live2D/waifu.min.css' %}">
+
+        <!-- amazeui for css -->
+        <link rel="stylesheet" href="{% static 'assets/css/amazeui.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
+
+        <!-- mdeditor for css -->
+        <link rel="stylesheet" href="{% static 'mdeditor/css/editormd.preview.css' %}">
+        <link rel="stylesheet" href="{% static 'mdeditor/css/editormd.min.css' %}">
+
+
+        <!--zoom for css-->
+        <link rel="stylesheet" href="{% static 'zoom/css/zoom.css' %}">
+
+
+
+        <!--layer for css-->
+        <link rel="stylesheet" href="{% static 'layer/theme/default/layer.css' %}">
+
+        <!--share for css-->
+        <link rel="stylesheet" href="{% static 'share/css/share.min.css' %}">
+
+
+        {% block compress_css %}
+        {% endblock %}
+    {% endcompress %}
+
+
+
+<body >
+
+<!--google 广告-->
+<script type='text/javascript'>
+    (function(a, b, c, d, e, j, s) {
+        a[d] = a[d] || function() {
+            (a[d].a = a[d].a || []).push(arguments)
+        };
+        j = b.createElement(c),
+            s = b.getElementsByTagName(c)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/widget/loader.js';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 240757);
+</script>
+
+
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+<div class="container demo-1">
+<div class="blog large-header" id="large-header" >
+        <canvas id="demo-canvas" style="position:absolute;z-index:-999;"></canvas>
+        <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
+
+            <div class="am-u-sm-8 am-u-sm-centered">
+
+                <img width="200" src="/blog/static/blog/img/logo3.jpg" alt="Amaze UI Logo"/>
+                <h2 class="am-hide-sm-only">{{ SITE_NAME }}</h2>
+            </div>
+        </header>
+
+        {% cache 36000 nav %}
+            {% include 'share_layout/nav.html' %}
+        {% endcache %}
+
+                 <div  id="main" >
+                 <div  class="am-u-md-8">
+
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+        {% block sidebar %}
+
+        {% endblock %}
+
+    </div>
+
+    {% include 'share_layout/footer.html' %}
+
+</div><!-- #blog -->
+
+</div>
+</body>
+<footer>
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'blog/js/jquery-3.1.1.js' %}"></script>
+
+        <!--背景星空图-->
+        <script type="text/javascript" src="{% static 'bg/js/TweenLite.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'bg/js/EasePack.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'bg/js/rAF.js' %}"></script>
+        <script type="text/javascript" src="{% static 'bg/js/bg.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'blog/js/nprogress.js' %}"></script>
+        <script src="{% static 'blog/js/blog.js' %}" type="application/javascript"></script>
+        <script src="{% static 'blog/js/navigation.js' %}" type="application/javascript"></script>
+    <!-- live2D for js -->
+        <script src="{% static 'live2D/jquery.min.js' %}"></script>
+        <script src="{% static 'live2D/jquery-ui.min.js' %}"></script>
+        <script src="{% static 'live2D/waifu-tips.min.js' %}"></script>
+        <script src="{% static 'live2D/live2d.min.js' %}"></script>
+
+    <!-- AmazeUI for is -->
+        <script src="{% static 'assets/js/amazeui.min.js' %}"></script>
+        <!--[if lt IE 9]>
+        <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+        <script src="{% static 'assets/js/amazeui.ie8polyfill.min.js' %}"></script>
+        <![endif]-->
+
+
+        <script  src="{% static 'layer/layer.js' %}"></script>
+
+    <!-- mdeditor for js -->
+        <script src="{% static 'mdeditor/editormd.js' %}"></script>
+        <script src="{% static 'mdeditor/lib/marked.min.js' %}"></script>
+        <script src="{% static 'mdeditor/lib/raphael.min.js' %}"></script>
+        <script src="{% static 'mdeditor/lib/underscore.min.js' %}"></script>
+        <script src="{% static 'mdeditor/lib/sequence-diagram.min.js' %}"></script>
+        <script src="{% static 'mdeditor/lib/prettify.min.js' %}"></script>
+        <script src="{% static 'mdeditor/lib/flowchart.min.js' %}"></script>
+        <script src="{% static 'mdeditor/lib/jquery.flowchart.min.js' %}"></script>
+        <script src="{% static 'assets/js/mdeditor.setting.js' %}"></script>
+
+        <script src="{% static 'threejs/three.min.js' %}"></script>
+
+        <!--share for js-->
+
+        <script src="{% static 'share/js/social-share.js' %}"></script>
+        <script src="{% static 'share/js/qrcode.js' %}"></script>
+        <script src="{% static 'share/js/share.setting.js' %}"></script>
+
+       <!--zoom for js-->
+        <script src="{% static 'zoom/js/zoom.js' %}"></script>
+        <script>
+
+                $("img").attr("data-action","zoom")
+
+                if($('img').attr('id') != 'logo-had'){
+                    $("img").addClass("am-img-thumbnail am-radius")
+                }
+
+                 // $("img").click(function() {
+                 //        $("img").addClass("am-fl")
+                 //    }) //添加浮动
+
+        </script>
+
+    <!--live2D的模型参数-->
+        <script>
+               /* 可直接修改部分参数 */
+              /* 可直接修改部分参数 */
+        live2d_settings['modelId'] = 2;                  // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 87;         // 默认材质 ID
+        live2d_settings['modelStorage'] = true;         // 不储存模型 ID
+        live2d_settings['canCloseLive2d'] = true;       // 隐藏 关闭看板娘 按钮
+        live2d_settings['canTurnToHomePage'] = false;    // 隐藏 返回首页 按钮
+        live2d_settings['waifuSize'] = '200x250';        // 看板娘大小
+        live2d_settings['waifuTipsSize'] = '150x50';    // 提示框大小
+        live2d_settings['waifuFontSize'] = '15px';       // 提示框字体
+        live2d_settings['waifuToolFont'] = '20px';       // 工具栏字体
+        live2d_settings['waifuToolLine'] = '25px';       // 工具栏行高
+        live2d_settings['waifuToolTop'] = '-60px';       // 工具栏顶部边距
+        live2d_settings['waifuDraggable'] = 'unlimited';    // 拖拽样式, 随便放
+        live2d_settings['waifuEdgeSide'] = 'left:900';       //放在左边
+        live2d_settings['waifuDraggableRevert'] = false;    //松开鼠标还原拖拽位置
+
+        /* 在 initModel 前添加 */
+        initModel("/blog/static/live2D/waifu-tips.json")
+
+
+        </script>
+
+
+
+
+    {% block compress_js %}
+        {% endblock %}
+    {% endcompress %}
+    {% block footer %}
+    {% endblock %}
+</footer>
+
+
+
+</html>
+

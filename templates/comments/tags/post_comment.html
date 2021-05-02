@@ -1,0 +1,92 @@
+<!-- 代码1：放在页面需要展示的位置  -->
+<!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+<!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
+<!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
+<!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
+<script type="text/javascript" charset="utf-8" src="https://cy-cdn.kuaizhan.com/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://cy-cdn.kuaizhan.com/js/changyan.labs.https.js?appid=cyuWsWl5k"></script>
+
+<!--<a href="https://cy-cdn.kuaizhan.com/api/labs/hotnewswall/load?client_id=cyuWsWl5k">畅言云评新闻墙</a>-->
+
+
+<!-- 代码1：放在页面需要展示的位置  -->
+<!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
+<div id="cyBarrage" role="cylabs" data-use="barrage"></div>
+<!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
+<!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
+<!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
+<!-- 如需修改默认配置，请到cy-cdn.kuaizhan.com后台进行配置 -->
+<script type="text/javascript" charset="utf-8" src="http://cy-cdn.kuaizhan.com/js/??lib/jquery.js,changyan.labs.js?appid=cyuWsWl5k"></script>
+
+
+
+<div id="comments" class="comments-area">
+
+    <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">发表评论
+            <small><a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress/?p=3786#respond"
+                      style="display:none;">取消回复</a></small>
+        </h3>
+        <form action="{% url 'comments:postcomment' article.pk %}" method="post" id="commentform"
+              class="comment-form">{% csrf_token %}
+            <p class="comment-form-comment">
+                {{ form.body.label_tag }}
+
+                {{ form.body }}
+                {{ form.body.errors }}
+            </p>
+            <p class="comment-form-author">
+                {% if not form.name.is_hidden %}
+                    {{ form.name.label_tag }}
+                {% endif %}
+                {{ form.name }}
+                {{ form.name.errors }}
+            <p class="comment-form-email">
+                {% if not form.email.is_hidden %}
+                    {{ form.email.label_tag }}
+                {% endif %}
+                {{ form.email }}
+                {{ form.email.errors }}
+            </p>
+            {{ form.parent_comment_id }}
+            <div class="form-submit">
+                <span class="comment-markdown"> 支持MarkDown</span>
+                <input  name="submit" type="submit" id="submit" class="am-btn am-btn-default am-round" value="发表评论"/>
+                <small class="cancel-comment" id="cancel_comment" style="display: none">
+                    <a href="javascript:void(0)" id="cancel-comment-reply-link" onclick="cancel_reply()">取消回复</a>
+                </small>
+            </div>
+        </form>
+    </div><!-- #respond -->
+
+</div><!-- #comments .comments-area -->
+
+
+
+<h2>两种评论两种风格 </h2>
+
+
+
+
+<!--畅言评论-->
+
+
+
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cyuWsWl5k';
+var conf = 'prod_c6bd9b0ab44c452ecb4174c02abf8dbf';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+var head = document.getElementsByTagName('head')[0]||document.head||document.documentElement;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.charset = 'utf-8';
+script.id = 'changyan_mobile_js';
+script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
+head.appendChild(script);
+} else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+

@@ -1,0 +1,185 @@
+{% load blog_tags %}
+
+
+
+
+    <div id="secondary"  class="am-u-md-4 blog-sidebar" role="complementary">
+
+        <div class="am-panel-group" id="accordion">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd">
+              <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-1'}">
+                 <label class="screen-reader-text" for="s">搜索：</label>
+              </h4>
+            </div>
+            <div id="do-not-say-1" class="am-panel-collapse am-collapse am-in">
+              <div class="am-panel-bd">
+
+                    <form role="search" method="get" id="searchform" class="am-topbar-form am-topbar-left am-form-inline am-topbar-right" action="/search">
+                        <div class="am-form-group">
+
+                            <input  class="am-form-field am-input-lg" type="text" placeholder="搜索文章" value="" name="q" id="q"/>
+                            <input type="submit" class="am-btn am-btn-default" id="searchsubmit" value="搜索"/>
+                        </div>
+                    </form>
+
+                    <br>
+                    <br>
+              </div>
+            </div>
+        </div>
+
+
+     <div class="am-panel-group" id="accordion2">
+
+        <section class="am-panel am-panel-default ">
+    {% if extra_sidebars %}
+                {% for sidebar in extra_sidebars %}
+
+                <div class="am-panel-hd" data-am-collapse="{parent: '#accordion2', target: '#do-not-say-2'}">
+
+                    {{ sidebar.name }} (点击关闭)
+                </div>
+            <div id="do-not-say-2" class="am-panel-collapse am-collapse am-in">
+                <div class="am-panel-bd">
+                    <p>
+                    {{ sidebar.content|custom_markdown }}
+                    </p>
+                    <a class="am-btn am-btn-success am-btn-sm" href="#">查看更多 →</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+            </section>
+    {% if most_read_articles %}
+        <section class="am-panel am-panel-default">
+            <div class="am-panel-hd">Views</div>
+            <ul class="am-list blog-list">
+                {% for a in most_read_articles %}
+                    <li>
+                        <a href="{{ a.get_absolute_url }}" title="{{ a.title }}">
+                            {{ a.title }}
+                        </a> - {{ a.views }} views
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </section>
+    {% endif %}
+    {% if sidebar_categorys %}
+            <section class="am-panel am-panel-default">
+            <div class="am-panel-hd">分类目录</div>
+            <ul class="am-list am-list-border">
+                {% for c in sidebar_categorys %}
+                    <li class="cat-item cat-item-184"><a href={{ c.get_absolute_url }}>{{ c.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            </section>
+    {% endif %}
+    {% if sidebar_comments and  open_site_comment %}
+
+        <section class="am-panel am-panel-success">
+            <div class="am-panel-hd">近期评论</div>
+            {% comment %}
+                <div class="am-panel-bd">
+                <ul class="am-list blog-list" data-num-items="5" data-show-avatars="1" data-show-time="1"
+                    data-show-title="1" data-show-admin="1" data-avatar-size="30" data-excerpt-length="70">
+                </ul>{% endcomment %}
+                 <ul id="recentcomments" class="am-list am-list-border">
+                {% for c in sidebar_comments %}
+                    <li class="recentcomments">
+                        <span style="float: left" class="am-badge am-badge-secondary am-round">{{ c.author.username }}</span> 发表了评论 :
+                        <i class="am-icon-comment-o am-icon-fw"></i><a class="am-text-truncate" href="{{ c.article.get_absolute_url }}#comment-{{ c.pk }}">{{ c.article.title }}</a>
+                    </li>
+
+                {% endfor %}
+                </ul>
+                </div>
+
+        </section>
+    {% endif %}
+    {% if recent_articles %}
+        <section class="am-panel am-panel-default">
+            <div class="am-panel-hd">近期文章</div>
+            <ul class="am-list am-list-border">
+
+                {% for a in  recent_articles %}
+                    <li><a href="{{ a.get_absolute_url }}" title="{{ a.title }}">
+                        {{ a.title }}
+                    </a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+    {% if sidabar_links %}
+        <section class="am-panel am-panel-secondary">
+            <div class="am-panel-hd">书签</div>
+            <ul class='am-list am-list-border'>
+                {% for l in sidabar_links %}
+                    <li>
+                        <a href="{{ l.link }}" target="_blank" title="{{ l.name }}"><i class="am-icon-tag am-icon-fw"></i>{{ l.name }}</a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </section>
+    {% endif %}
+    {% if show_google_adsense %}
+        <section class="am-panel am-panel-default">
+                <div class="am-panel-hd">广告推广</div>
+                 <div class="am-panel-bd">
+                {{ google_adsense_codes|safe }}
+                </div>
+        </section>
+    {% endif %}
+    {% if sidebar_tags %}
+
+          <div style="margin-top: 5%;" class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+            <h2 class="blog-title"><span>TAG cloud</span></h2>
+            <div class="am-u-sm-12 blog-clear-padding">
+
+                 {% for tag,count,size in sidebar_tags %}
+                    <a href="{{ tag.get_absolute_url }}"
+                       class="tag-link-{{ tag.id }} tag-link-position-{{ tag.id }} blog-tag"
+                       style="font-size: {{ size }}pt;" title="{{ count }}个话题"> {{ tag.name }}
+                    </a>
+                {% endfor %}
+
+            </div>
+          </div>
+
+    {% endif %}
+    <!--<aside id="text-2" class="widget widget_text"><h3 class="widget-title">欢迎您star或者fork本站源代码</h3>-->
+        <!--<div class="textwidget">-->
+
+            <!--<p><a href="https://github.com/liangliangyy/DjangoBlog" rel="nofollow"><img-->
+                    <!--src="https://resource.lylinux.net/img.shields.io/github/stars/liangliangyy/djangoblog.svg?style=social&amp;label=Star"-->
+                    <!--alt="GitHub stars"></a> <a href="https://github.com/liangliangyy/DjangoBlog" rel="nofollow"><img-->
+                    <!--src="https://resource.lylinux.net/img.shields.io/github/forks/liangliangyy/djangoblog.svg?style=social&amp;label=Fork"-->
+                    <!--alt="GitHub forks"></a></p>-->
+        <!--</div>-->
+    <!--</aside>-->
+
+
+    <section class="am-panel am-panel-danger">
+        <div class="am-panel-hd">功能</div>
+        <ul class="am-list blog-list">
+            <li><a href="/admin/" rel="nofollow">管理站点</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url "account:logout" %}" rel="nofollow">登出</a>
+                </li>
+
+            {% else %}
+                <li><a href="{% url "account:login" %}" rel="nofollow">登录</a>
+            {% endif %}
+            {% if user.is_superuser %}
+                <li><a href="{% url "blog:refresh" %}" target="_blank">刷新缓存</a></li>
+                <!--<li><a href="{% url 'owntracks:show_dates' %}" target="_blank">运动轨迹记录</a></li>-->
+            {% endif %}
+            <!--<li><a href="http://gitbook.lylinux.net" target="_blank" rel="nofollow">GitBook</a></li>-->
+        </ul>
+    </section>
+    <div id="rocket" class="show" title="点我返回顶部"></div>
+    </div>
+</div><!-- #secondary -->

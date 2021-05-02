@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="referrer" content="no-referrer">
+    <title>xgplayer</title>
+    <style type="text/css">
+      html, body {width:100%;height:100%;margin:auto;overflow: hidden;}
+    </style>
+  </head>
+  <body>
+    <div id="mse"></div>
+    <script src="//cdn.jsdelivr.net/npm/xgplayer@1.1.4/browser/index.js" charset="utf-8"></script>
+      <script>
+      let player = new Player({
+		"id": "mse",
+		"url": "//s1.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4",
+		"playsinline": true,
+		"whitelist": [
+				""
+		],
+		"autoplay": true,
+		"playbackRate": [
+				0.5,
+				1,
+				2
+		],
+		"danmu": {
+				"comments": [
+						{
+								"duration": 15000,
+								"id": "2",
+								"start": 3000,
+								"txt": "长弹幕长弹幕长弹幕",
+								"mode": "top"
+						},
+						{
+								"duration": 15000,
+								"id": "3",
+								"start": 4000,
+								"txt": "长弹幕长弹幕长弹幕",
+								"mode": "bottom"
+						},
+						{
+								"duration": 15000,
+								"id": "4",
+								"start": 5000,
+								"txt": "长弹幕长弹幕长弹幕",
+								"mode": "scroll"
+						},
+						{
+								"duration": 15000,
+								"id": "5",
+								"start": 8000,
+								"txt": "长弹幕长弹幕长弹幕",
+								"mode": "scroll"
+						}
+				],
+				"area": {
+						"start": 0,
+						"end": 1
+				},
+				"closeDefaultBtn": false,
+				"defaultOff": false,
+				"panel": true
+		},
+		"screenShot": true,
+		"pip": true,
+		"keyShortcut": "on",
+		"x5-video-player-type": "h5",
+		"x5-video-player-fullscreen": "true",
+		"x5-video-orientation": "landscape",
+		"fluid": true,
+		"poster": "http://www.cxx1.com/blog/static/blog/img/logo3.jpg"
+      });
+      player.emit('resourceReady', [])
+          </script>
+  </body>
+</html>

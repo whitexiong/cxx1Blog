@@ -1,0 +1,66 @@
+<footer id="colophon" role="contentinfo">
+
+    <div class="site-info" style="text-align: center">
+        Copyright&copy;&nbsp;{{ CURRENT_YEAR }}&nbsp;
+        <a href="/" target="blank">{{ SITE_NAME }}</a>
+        &nbsp;|&nbsp;
+        <a href="/sitemap.xml" title="SiteMap" target="_blank">
+            SiteMap
+        </a>
+        &nbsp;|&nbsp;
+        <a href="/feed" title="RSS Feed" target="_blank">
+            RSS Feed
+        </a>
+        &nbsp;|&nbsp;
+        <a href="/links.html" title="友情链接" rel="nofollow" target="_blank">
+            友情链接
+        </a>
+        |&nbsp;
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?d5c3c886e0cbed57dd8dd7aaa1f841b9";
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        <a href="https://tongji.baidu.com/sc-web/3478620/home/ico?siteId=11261596" target="_blank"
+           rel="nofollow">百度统计</a>
+
+        {% comment %}{% include 'share_layout/analyticscode.html' %}{% endcomment %}
+        |
+        <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279058550'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279058550%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+    <div class="site-info" style="text-align: center">
+        Powered by
+        <a href="https://www.djangoproject.com/" rel="nofollow" target="blank">Django</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/whitexiong/DjangoBlog" rel="nofollow" target="blank">whitexiong</a>
+        |
+        <a href="http://www.cxx1.com" target="blank">white</a>
+    </div>
+    {% if BEIAN_CODE %}
+        <div class="site-info" style="text-align: center">
+            <a href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank">
+                <p style=" height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+                    {{ BEIAN_CODE }}
+                </p>
+            </a>
+            {% if BEIAN_CODE_GONGAN and SHOW_GONGAN_CODE %}
+                {{ BEIAN_CODE_GONGAN |safe }}
+            {% endif %}
+        </div>
+
+
+
+    {% endif %}
+    {% if ANALYTICS_CODE %}
+        {{ ANALYTICS_CODE| safe }}
+    {% endif %}
+
+</footer><!-- #colophon -->
+
+
+
+
