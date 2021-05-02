@@ -41,7 +41,7 @@ ALLOWED_HOSTS = ['*', '139.196.126.203', 'www.cxx1.com']
 INSTALLED_APPS = [
     # 'django.contrib.admin',
     # 'simplepro',
-    'simpleui',
+      'simpleui',
     # 'import_export',
     'django.contrib.admin.apps.SimpleAdminConfig',
     'django.contrib.auth',
@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'owntracks',
     'compressor',
     'django_apscheduler',
-    'django_crontab'
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
