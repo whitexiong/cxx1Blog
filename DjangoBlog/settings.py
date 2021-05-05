@@ -308,7 +308,13 @@ COMPRESS_JS_FILTERS = [
 ]
 
 SIMPLEUI_ICON = {
-    'Blog': 'fab fa-apple'
+    'Accounts': 'fas fa-user',
+    'Blog': 'fab fa-apple',
+    'Comments': 'fas fa-comment',
+    'Oauth': 'fab fa-internet-explorer',
+    'Owntracks': 'fas fa-globe',
+    'Servermanager': 'fas fa-envelope',
+    '管理': 'fas fa-clipboard-list'
 }
 
 SIMPLEUI_CONFIG = {
@@ -320,7 +326,7 @@ SIMPLEUI_CONFIG = {
         'url': 'https://gitee.com/tompeppa/simpleui',
         'codename':'simpleui'
     }, {
-        'name': '啊哈哈哈',
+        'name': '菜单扩展演示',
         'icon': 'fa fa-file',
         'codename': 'test',
         'models': [{
@@ -328,12 +334,7 @@ SIMPLEUI_CONFIG = {
             'url': 'http://baidu.com',
             'icon': 'far fa-surprise',
             'codename':'baidu'
-        }, {
-            'name': '内网穿透',
-            'url': 'https://www.wezoz.com',
-            'icon': 'fab fa-github',
-            'codename':'nat'
-        }, {
+        },  {
             'name': '内网穿透',
             'url': 'https://www.wezoz.com',
             'icon': 'fab fa-github'
