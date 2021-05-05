@@ -317,7 +317,7 @@ SIMPLEUI_CONFIG = {
         'url': 'https://gitee.com/tompeppa/simpleui',
         'codename':'simpleui'
     }, {
-        'name': '测试',
+        'name': '啊哈哈哈',
         'icon': 'fa fa-file',
         'codename': 'test',
         'models': [{
