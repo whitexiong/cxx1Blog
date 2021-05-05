@@ -307,12 +307,15 @@ COMPRESS_JS_FILTERS = [
     'compressor.filters.jsmin.JSMinFilter'
 ]
 
+SIMPLEUI_ICON = {
+    'Blog': 'fab fa-apple'
+}
 
 SIMPLEUI_CONFIG = {
     # 在自定义菜单的基础上保留系统模块
     'system_keep': True,
     'menus': [{
-        'name': 'Simpleui',
+        'name': '文件管理',
         'icon': 'fas fa-code',
         'url': 'https://gitee.com/tompeppa/simpleui',
         'codename':'simpleui'
