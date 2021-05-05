@@ -335,7 +335,7 @@ SIMPLEUI_CONFIG = {
             'url': 'https://www.wezoz.com',
             'icon': 'fab fa-github'
         }, {
-            'name': '登录页嵌套测试',
+            'name': '登录页嵌套测试所示',
             'url': '/login'
         }]
     }]
