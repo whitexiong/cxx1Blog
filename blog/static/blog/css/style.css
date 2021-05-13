@@ -1750,7 +1750,7 @@ img#wpstats {
     }
 
     .main-navigation li ul li a {
-        background: #47c174;    /*导航栏背景色*/
+        background: #00CCFF;    /*导航栏背景色*/
         border-bottom: 1px solid #ededed;
         display: block;
         font-size: 11px;
